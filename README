@@ -8,7 +8,7 @@ The extension is licenced under LGPL 2.1 or later.
 HOW TO INSTALL
 ==============
 The best way to get this extension is by visiting its page on
-extensions.gnome.org: http://extensions.gnome.org/extension/NNN
+extensions.gnome.org: http://extensions.gnome.org/extension/967
 
 If you need to modify the source, then the git repository is the best
 solution: http://github.com/jonnylamb/shell-hide-legacy-tray/
