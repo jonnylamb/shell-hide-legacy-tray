@@ -1,0 +1,16 @@
+WHAT IS THIS?
+=============
+This is a gnome-shell extension to hide the legacy tray bar introduced
+in GNOME Shell 3.16.
+
+The extension is licenced under LGPL 2.1 or later.
+
+HOW TO INSTALL
+==============
+The best way to get this extension is by visiting its page on
+extensions.gnome.org: http://extensions.gnome.org/extension/NNN
+
+If you need to modify the source, then the git repository is the best
+solution: http://github.com/jonnylamb/shell-hide-legacy-tray/
+Type "make force-install" to install the extension, then follow the
+instructions printed on screen.
