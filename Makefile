@@ -1,6 +1,6 @@
 EXT_DIR="$(HOME)/.local/share/gnome-shell/extensions"
 UUID=`perl -nle 'if (m{"uuid": "([^"]+)"}) { print $$1 }' metadata.json`
-FILES="AUTHORS COPYING README extension.js metadata.json"
+FILES="AUTHORS COPYING README extension.js metadata.json screenshot.png"
 
 SCHEMA="org.gnome.shell"
 KEY="enabled-extensions"
