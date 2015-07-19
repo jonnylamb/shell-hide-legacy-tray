@@ -1,7 +1,13 @@
 WHAT IS THIS?
 =============
-This is a gnome-shell extension to hide the legacy tray bar introduced
-in GNOME Shell 3.16.
+This is a gnome-shell extension to hide the legacy tray introduced in
+GNOME Shell 3.16. Tray icons are still dealt with by the legacy tray
+but are no longer visible.
+
+I wrote this because I never needed to use any legacy tray icons
+(Dropbox, Spotify, etc.) and the tray would always pop out and get in
+the way when I needed to do something in the bottom left of the
+screen.
 
 The extension is licenced under LGPL 2.1 or later.
 

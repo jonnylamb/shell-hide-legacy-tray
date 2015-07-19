@@ -2,6 +2,6 @@
     "shell-version": ["3.16"],
     "uuid": "hide-legacy-tray@shell-extensions.jonnylamb.com",
     "name": "Hide Legacy Tray",
-    "description": "Hides the legacy tray.",
+    "description": "Hides the legacy tray in the bottom left.",
     "url": "http://github.com/jonnylamb/shell-hide-legacy-tray/"
 }
