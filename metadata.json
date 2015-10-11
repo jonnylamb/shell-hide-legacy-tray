@@ -1,5 +1,5 @@
 {
-    "shell-version": ["3.16"],
+    "shell-version": ["3.16", "3.18"],
     "uuid": "hide-legacy-tray@shell-extensions.jonnylamb.com",
     "name": "Hide Legacy Tray",
     "description": "Hides the legacy tray in the bottom left.",
