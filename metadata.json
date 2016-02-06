@@ -3,5 +3,6 @@
     "uuid": "hide-legacy-tray@shell-extensions.jonnylamb.com",
     "name": "Hide Legacy Tray",
     "description": "Hides the legacy tray in the bottom left.",
-    "url": "http://github.com/jonnylamb/shell-hide-legacy-tray/"
+    "url": "http://github.com/jonnylamb/shell-hide-legacy-tray/",
+    "settings-schema": "org.gnome.shell.extensions.hide-legacy-tray"
 }
