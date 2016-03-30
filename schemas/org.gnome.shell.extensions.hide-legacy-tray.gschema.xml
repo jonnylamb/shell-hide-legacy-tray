@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist gettext-domain="gnome-shell-extensions">
+  <schema path="/org/gnome/shell/extensions/hide-legacy-tray/" id="org.gnome.shell.extensions.hide-legacy-tray">
+    <key name="use-toggle-shortcut" type="b">
+      <default>false</default>
+      <summary>Use shortcuts?</summary>
+      <description>Do you want to use toggle shortcut?</description>
+    </key>
+    <key name="toggle-shortcut" type="as">
+      <default><![CDATA[['<Super>q']]]></default>
+      <summary>Keybinding to toggle visibility of legacy tray</summary>
+      <description>Keybinding to toggle visibility of legacy tray</description>
+    </key>
+  </schema>
+</schemalist>

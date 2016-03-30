@@ -1,6 +1,6 @@
 EXT_DIR="$(HOME)/.local/share/gnome-shell/extensions"
 UUID=`perl -nle 'if (m{"uuid": "([^"]+)"}) { print $$1 }' metadata.json`
-FILES="AUTHORS COPYING README extension.js metadata.json screenshot.png"
+FILES="AUTHORS COPYING README schemas extension.js convenience.js prefs.js config.js metadata.json screenshot.png"
 
 SCHEMA="org.gnome.shell"
 KEY="enabled-extensions"
@@ -19,7 +19,7 @@ force-install: uninstall-link
 	fi
 	@mkdir -p $(EXT_DIR)/$(UUID)
 	@for f in "$(FILES)"; do \
-	    cp -f $$f $(EXT_DIR)/$(UUID)/$$f; \
+	    cp -fr $$f $(EXT_DIR)/$(UUID)/$f; \
 	done
 	@if [ $(STATUS) = "enabled" ]; then \
 	    echo "To reload the shell (and the extension) press ALT-F2 and type 'r'."; \
