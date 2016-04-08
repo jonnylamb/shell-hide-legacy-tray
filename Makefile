@@ -12,12 +12,12 @@ install:
 	@echo "You should install this extension from <https://extensions.gnome.org/extension/967>."
 	@echo "If you really need to install from source, for instance because you are making changes, you can use 'make force-install'."
 
-force-install: uninstall-link
+force-install: uninstall-link compile-schemas
 	@if [ `id -u` = 0 ]; then \
 	    echo "You need to install this extension as a normal user."; \
 	    exit 1; \
 	fi
-	@mkdir -p $(EXT_DIR)/$(UUID)
+	@mkdir -p $(EXT_DIR)/$(UUID)/schemas
 	@for f in "$(FILES)"; do \
 	    cp -fr $$f $(EXT_DIR)/$(UUID)/$f; \
 	done
@@ -27,7 +27,7 @@ force-install: uninstall-link
 	    echo "To enable the extension type 'make enable'."; \
 	fi
 
-install-link: uninstall-link
+install-link: uninstall-link compile-schemas
 	@if [ -e $(EXT_DIR)/$(UUID) ]; then \
 	    echo "An installed version of the extension exists; remove it first."; \
 	    exit 1; \
@@ -48,6 +48,7 @@ uninstall: disable-internal uninstall-link
 	@for f in "$(FILES)" ChangeLog; do \
 	    rm $(EXT_DIR)/$(UUID)/$$f 2> /dev/null || true; \
 	done
+	@[ -d $(EXT_DIR)/$(UUID)/schemas ] && rmdir $(EXT_DIR)/$(UUID)/schemas; true
 	@[ -d $(EXT_DIR)/$(UUID) ] && rmdir $(EXT_DIR)/$(UUID); true
 
 enable: disable-internal
@@ -85,7 +86,10 @@ status:
 	    echo "The extension is disabled"; \
 	fi
 
-dist:
+compile-schemas:
+	@glib-compile-schemas schemas/
+
+dist: compile-schemas
 	@git log > ChangeLog; \
 	for f in "$(FILES)"; do \
 	    if [ "x$$f" != "xREADME" ]; then \
