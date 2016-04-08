@@ -1,6 +1,6 @@
 EXT_DIR="$(HOME)/.local/share/gnome-shell/extensions"
 UUID=`perl -nle 'if (m{"uuid": "([^"]+)"}) { print $$1 }' metadata.json`
-FILES="AUTHORS COPYING README extension.js convenience.js prefs.js config.js metadata.json screenshot.png schemas/gschemas.compiled schemas/org.gnome.shell.extensions.hide-legacy-tray.gschema.xml"
+FILES="AUTHORS COPYING README extension.js convenience.js prefs.js config.js metadata.json screenshot.png schemas/gschemas.compiled schemas/com.jonnylamb.shell-extensions.hide-legacy-tray.gschema.xml"
 
 SCHEMA="org.gnome.shell"
 KEY="enabled-extensions"

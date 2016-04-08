@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <schemalist gettext-domain="gnome-shell-extensions">
-  <schema path="/org/gnome/shell/extensions/hide-legacy-tray/" id="org.gnome.shell.extensions.hide-legacy-tray">
+  <schema path="/com/jonnylamb/shell-extensions/hide-legacy-tray/" id="com.jonnylamb.shell-extensions.hide-legacy-tray">
     <key name="use-toggle-shortcut" type="b">
       <default>false</default>
       <summary>Use shortcuts?</summary>
