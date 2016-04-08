@@ -2,4 +2,5 @@
 *.sw[op]
 *.rej
 *.orig
+gschemas.compiled
 hide-legacy-tray.zip
