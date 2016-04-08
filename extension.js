@@ -30,7 +30,7 @@ const Convenience = Self.imports.convenience;
 const config = Self.imports.config;
 
 let notify_id = 0;
-let visibile = 1;
+let visible = 1;
 
 function init() {
     this.settings = Convenience.getSettings();
