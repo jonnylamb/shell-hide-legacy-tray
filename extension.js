@@ -30,7 +30,7 @@ const Convenience = Self.imports.convenience;
 const config = Self.imports.config;
 
 let notify_id = 0;
-let visible = 1;
+let visible = true;
 
 function init() {
     this.settings = Convenience.getSettings();
@@ -51,7 +51,7 @@ function disable() {
 }
 
 function showTray() {
-    visible = 1;
+    visible = true;
     if (notify_id > 0)
         Main.legacyTray.actor.disconnect(notify_id);
     notify_id = 0;
@@ -60,7 +60,7 @@ function showTray() {
 }
 
 function hideTray() {
-    visible = 0;
+    visible = false;
     Main.legacyTray.actor.hide();
 
     /* so elegant */
@@ -72,7 +72,7 @@ function hideTray() {
 }
 
 function toggleTray() {
-    if (visible == 1)
+    if (visible)
         hideTray();
     else
         showTray();
