@@ -63,8 +63,6 @@ function hideTray() {
     visible = false;
     Main.legacyTray.actor.hide();
 
-    /* so elegant */
-
     notify_id = Main.legacyTray.actor.connect("notify::visible", function() {
         if (Main.legacyTray.actor.visible)
             Main.legacyTray.actor.hide();
