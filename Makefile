@@ -1,6 +1,6 @@
 EXT_DIR="$(HOME)/.local/share/gnome-shell/extensions"
 UUID=`perl -nle 'if (m{"uuid": "([^"]+)"}) { print $$1 }' metadata.json`
-FILES="AUTHORS COPYING README extension.js convenience.js prefs.js config.js metadata.json screenshot.png schemas/gschemas.compiled schemas/com.jonnylamb.shell-extensions.hide-legacy-tray.gschema.xml"
+FILES="AUTHORS COPYING README extension.js convenience.js prefs.js config.js metadata.json screenshot.png schemas"
 
 SCHEMA="org.gnome.shell"
 KEY="enabled-extensions"
@@ -41,12 +41,12 @@ install-link: uninstall-link compile-schemas
 
 uninstall-link:
 	@if [ -L $(EXT_DIR)/$(UUID) ]; then \
-	    rm $(EXT_DIR)/$(UUID); \
+	    rm -r $(EXT_DIR)/$(UUID); \
 	fi
 
 uninstall: disable-internal uninstall-link
 	@for f in "$(FILES)" ChangeLog; do \
-	    rm $(EXT_DIR)/$(UUID)/$$f 2> /dev/null || true; \
+	    rm -r $(EXT_DIR)/$(UUID)/$$f 2> /dev/null || true; \
 	done
 	@[ -d $(EXT_DIR)/$(UUID)/schemas ] && rmdir $(EXT_DIR)/$(UUID)/schemas; true
 	@[ -d $(EXT_DIR)/$(UUID) ] && rmdir $(EXT_DIR)/$(UUID); true
